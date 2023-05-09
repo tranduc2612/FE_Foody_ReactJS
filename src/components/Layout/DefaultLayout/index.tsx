@@ -1,7 +1,8 @@
 import { ReactNode,FunctionComponent } from "react";
-import Header from "./Header";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
+import Header from "./Header";
 
 export interface ILayoutDefault {
     children?:ReactNode
@@ -10,11 +11,13 @@ export interface ILayoutDefault {
 function DefaultLayout({children}:ILayoutDefault) {
 
     return ( <>
-        <Header />
-
-        {children}    
-        <Outlet />    
-
+        <div className="bg-bg-header max-w-full shadow-current">
+            <Header />
+        </div>
+        <Navbar />
+        <div className="container">
+            {children} 
+        </div>
         <Footer />
     </> );
 }

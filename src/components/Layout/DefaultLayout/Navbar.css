@@ -1,0 +1,31 @@
+.navbar__navigation-link{
+    color: rgb(55 65 81);
+}
+
+.navbar__navigation-link:hover{
+    color: var(--orange-primary);
+    transition: color .3s ease-in-out;
+}
+
+.navbar__navigation-link::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    height: 0.2rem;
+    background-color:var(--orange-primary);
+    transform: scaleX(0%);
+    border-radius: 3px;
+    width: 80%;
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.navbar__navigation-link:hover::after,.navbar__navigation-link.active::after{
+    transform: scaleX(100%);
+}
+
+.navbar__navigation-link.active{
+    color: var(--orange-primary);
+}
+
+
+

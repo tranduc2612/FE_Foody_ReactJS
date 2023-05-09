@@ -1,8 +1,7 @@
 import {Routes,Route } from 'react-router-dom';
 import { publicRouter,privateRouter } from './routes';
-import { FunctionComponent, useEffect, useMemo, useState } from 'react';
+import { FunctionComponent, useMemo, useState } from 'react';
 import {ILayoutDefault} from './components/Layout/DefaultLayout'
-
 
 
 function App() {
