@@ -1,7 +1,6 @@
-import { ReactNode,FunctionComponent } from "react";
+import { ReactNode, useState,MouseEvent } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { Outlet } from "react-router-dom";
 import Header from "./Header";
 
 export interface ILayoutDefault {
@@ -9,7 +8,6 @@ export interface ILayoutDefault {
 }
 
 function DefaultLayout({children}:ILayoutDefault) {
-
     return ( <>
         <div className="bg-bg-header max-w-full shadow-current">
             <Header />
